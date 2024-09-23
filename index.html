@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- this is game Container -->
+    <div class="game-container">
+      <h1>Rock, Paper, Scissors</h1>
+
+      <div class="scoreboard flex">
+        <!-- this is your score -->
+        <div class="your-score">
+          <div id="user-score" class="score">0</div>
+          <div class="score-label">You</div>
+        </div>
+
+        <!-- this is your opponent score -->
+        <div class="your-opponent-score">
+          <div id="opponent-score" class="score">0</div>
+          <div class="score-label">Opponent</div>
+        </div>
+      </div>
+
+      <!-- this is for showing icons into the box -->
+      <div class="choices flex">
+        <div id="user-choice" class="choice flex">?</div>
+        <div id="opponent-choice" class="choice flex">?</div>
+      </div>
+
+      <!-- this is for result text -->
+      <div id="result" class="result">Make your move!</div>
+
+      <!-- this is for game buttons -->
+      <div class="buttons flex">
+        <button id="rock" class="btn">
+          <i class="fa-solid fa-hand-back-fist"></i>
+        </button>
+        <button id="paper" class="btn">
+          <i class="fa-solid fa-hand"></i>
+        </button>
+        <button id="scissor" class="btn">
+          <i class="fa-solid fa-hand-scissors"></i>
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
