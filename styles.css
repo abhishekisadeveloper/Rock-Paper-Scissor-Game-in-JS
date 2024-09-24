@@ -16,7 +16,7 @@ body {
 
 .game-container {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #ffffffe3;
     padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 0 10px 20px #0000001a;
@@ -30,13 +30,18 @@ h1 {
 .scoreboard {
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
 }
 
 .score {
     font-size: 3.5rem;
     font-weight: 600;
     color: #4CAF50;
+}
+
+.vs {
+    color: #b40000;
+    font-size: 1.8rem;
 }
 
 .score-label {
