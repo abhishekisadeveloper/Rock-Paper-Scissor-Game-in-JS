@@ -101,7 +101,9 @@ function resultFun(userChoice, computerChoice) {
 resetEl.addEventListener('click', resetGame);
 
 function resetGame() {
+    userScore = 0;
     userScoreEl.textContent = 0;
+    opponentScore = 0;
     opponentScoreEl.textContent = 0;
 
     userChoiceIcon.textContent = '?';
