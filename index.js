@@ -18,6 +18,9 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissor = document.getElementById('scissor');
 
+// reset button.
+const resetEl = document.getElementById('resetEl');
+
 //(this is for opponent choice.)
 const choiceArray = ['rock', 'paper', 'scissor'];
 
@@ -28,18 +31,18 @@ const choiceIcons = {
     scissor: '<i class="fa fa-hand-scissors"></i>'
 };
 
-// this is for selecting random icon.
+// this is for random choices by the computer.
 function getOpponentChoice() {
     const opponentChoice = Math.floor(Math.random() * 3);
     return choiceArray[opponentChoice];
 }
 
-// (this is for user choices.)
+// this is for user choices.
 rock.addEventListener('click', () => playGame('rock'));
 paper.addEventListener('click', () => playGame('paper'));
 scissor.addEventListener('click', () => playGame('scissor'));
 
-// this is for updating icons.
+// this is the main function.
 function playGame(userChoice) {
     let computerChoice = getOpponentChoice();
     
@@ -89,8 +92,21 @@ function resultFun(userChoice, computerChoice) {
 
     }
 
-
     // this is for updating scores.
     userScoreEl.textContent = userScore;
     opponentScoreEl.textContent = opponentScore;
+}
+
+// reset function.
+resetEl.addEventListener('click', resetGame);
+
+function resetGame() {
+    userScoreEl.textContent = 0;
+    opponentScoreEl.textContent = 0;
+
+    userChoiceIcon.textContent = '?';
+    opponentChoiceIcon.textContent = '?';
+
+    gameResult.textContent = 'Make your move!';
+    gameResult.style.color = '#555';
 }
