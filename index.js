@@ -2,6 +2,10 @@
 let userScore = 0;
 let opponentScore = 0;
 
+const winAudio = new Audio('win.mp3');
+const loseAudio = new Audio('lose.mp3');
+const drawAudio = new Audio('draw.mp3');
+
 // this is for updating the scores.
 const userScoreEl = document.getElementById('user-score');
 const opponentScoreEl = document.getElementById('opponent-score');
@@ -71,6 +75,15 @@ function gameLogic(userChoice, computerChoice) {
     }
 }
 
+// This function throws confetti when the user wins
+function celebrateWin() {
+    confetti({
+        particleCount: 100,  // number of sprinkles
+        spread: 70,          // how wide they spread
+        origin: { y: 0.6 }   // where they start
+    });
+}
+
 // this is for Game Logic 2.
 function resultFun(userChoice, computerChoice) {
     let functionResult = gameLogic(userChoice, computerChoice);
@@ -79,17 +92,21 @@ function resultFun(userChoice, computerChoice) {
         userScore++;
         gameResult.textContent = 'Congrats You Win!';
         gameResult.style.color = '#4CAF50';
+        winAudio.play();
+
+        // this is for Sprinkling when you wine .
+        celebrateWin()
     }
     else if (functionResult === 'lose') {
         opponentScore++;
         gameResult.textContent = 'O No! You lose!';
         gameResult.style.color = '#ff0000';
-        
+        loseAudio.play();
     }
     else {
         gameResult.textContent = 'It\'s Draw!';
         gameResult.style.color = '#ffaa00';
-
+        drawAudio.play();
     }
 
     // this is for updating scores.
