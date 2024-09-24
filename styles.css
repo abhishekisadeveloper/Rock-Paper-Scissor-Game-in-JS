@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7f9fc;
+    background-color: #dddddd;
 }
 
 .flex{
@@ -19,7 +19,7 @@ body {
     background-color: #ffffff;
     padding: 20px 40px;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px #0000001a;
 }
 
 h1 {
@@ -56,8 +56,6 @@ h1 {
     height: 100px;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ccc;
-    border-radius: 10px;
 }
 
 .result {
@@ -73,11 +71,25 @@ h1 {
 .btn {
     font-size: 4rem;
     cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: transparent;
     transition: transform 0.2s ease;
+    color: #000000;
 }
 
 .btn:hover {
     transform: scale(90%); 
+}
+
+/* for the reset button */
+.reset-btn {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-top: 2rem;
+    border: none;
+    background-color: transparent;
+    color: #d30000;
 }
 
 
